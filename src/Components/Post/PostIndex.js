@@ -10,9 +10,11 @@ const PostIndex = (props) => {
     const [post, setPost] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
     const [postToUpdate, setPostToUpdate] = useState({});
+    // eslint-disable-next-line
     const {id} = useParams();
 
     const fetchPost = () => {
+        // eslint-disable-next-line
         fetch(`${APIURL}/post/`,{
             method: 'GET',
             headers: new Headers({

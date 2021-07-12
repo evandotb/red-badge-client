@@ -8,6 +8,7 @@
 
 // export default Username;
 
+// eslint-disable-next-line
 import UpdateEmail from './UpdateEmail';
 import React from 'react';
 import { Table, Button } from "reactstrap";
@@ -18,6 +19,7 @@ import APIURL from '../Helpers/environment';
 
 const UserTable = (props) => {
 
+    // eslint-disable-next-line
     const {id} = useParams();
 
     const deleteUser = (user) => {

@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line
 import { Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
@@ -7,9 +8,13 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 // import Post from './Components/Post';
 // import Sidebar from './Components/Sidebar/Sidebar';
+// eslint-disable-next-line
 import Login from './Components/Auth/Login';
+// eslint-disable-next-line
 import Signup from './Components/Auth/Signup';
+// eslint-disable-next-line
 import PostIndex from './Components/Post/PostIndex';
+// eslint-disable-next-line
 import Logout from './Components/Logout/Logout';
 import {useState, useEffect} from 'react';
 import Footer from './Components/Footer/Footer';
@@ -26,6 +31,7 @@ function App() {
       setSessionToken(localStorage.getItem('token'))
       console.log(sessionToken);
     };
+    // eslint-disable-next-line
   }, []);
 
   const updateToken = (newToken) => {

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Table, Button } from "reactstrap";
 import {useParams} from 'react-router-dom';
+// eslint-disable-next-line
 import EditPost from './EditPost';
 import APIURL from '../Helpers/environment';
 
 const PostTable = (props) => {
+    // eslint-disable-next-line
     const {id} = useParams();
     const deletePost = (post) => {
         fetch(`${APIURL}/post/delete/${post.id}` , {
