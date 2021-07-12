@@ -1,5 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
+import APIURL from '../Helpers/environment';
 
 const PostEdit = (props) => {
     const [editComment, setEditComment] = useState('');
@@ -8,7 +9,7 @@ const PostEdit = (props) => {
     const editComment = (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:3001/comment/edit/${id}`, {
+        fetch(`${APIURL}/comment/edit/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 comment: {

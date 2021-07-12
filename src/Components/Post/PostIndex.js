@@ -4,6 +4,7 @@ import CreatePost from './CreatePost';
 import PostTable from './PostTable'
 import EditPost from './EditPost';
 import {useParams} from 'react-router-dom';
+import APIURL from '../Helpers/environment';
 
 const PostIndex = (props) => {
     const [post, setPost] = useState([]);
@@ -12,7 +13,7 @@ const PostIndex = (props) => {
     const {id} = useParams();
 
     const fetchPost = () => {
-        fetch(`http://localhost:3001/post/`,{
+        fetch(`${APIURL}/post/`,{
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

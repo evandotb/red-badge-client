@@ -5,6 +5,7 @@ import Login from '../Auth/Login';
 import UserTable from './UserTable';
 import UpdateEmail from './UpdateEmail';
 import {useParams} from 'react-router-dom';
+import APIURL from '../Helpers/environment';
 
 const UserIndex = (props) => {
     const [user, setUser] = useState([]);
@@ -13,7 +14,7 @@ const UserIndex = (props) => {
     const {id} = useParams();
 
     const fetchUser = () => {
-        fetch(`http://localhost:3001/user/`,{
+        fetch(`${APIURL}/user/`,{
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

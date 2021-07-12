@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, TextField, FormControl } from '@material-ui/core';
+import APIURL from '../Helpers/environment';
 
 export default function CreateComment (props) {
     const [comment, setComment] = useState('');
@@ -7,7 +8,7 @@ export default function CreateComment (props) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:3001/comment/create`, {
+        fetch(`${APIURL}/comment/create`, {
             method: 'POST',
             body: JSON.stringify({
                 comment: {

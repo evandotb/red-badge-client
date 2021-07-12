@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Button, TextField, Title } from '@material-ui/core';
 import { Form } from 'reactstrap';
 import {useParams} from 'react-router-dom';
+import APIURL from '../Helpers/environment';
 
 const PostEdit = (props) => {
     const [editTitle, setEditTitle] = useState('');
@@ -13,7 +14,7 @@ const PostEdit = (props) => {
     const editPost = (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:3001/post/edit/${id}`, {
+        fetch(`${APIURL}/post/edit/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 post: {

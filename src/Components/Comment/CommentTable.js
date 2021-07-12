@@ -1,11 +1,12 @@
 import React from 'react';
 import { Table, Button } from "reactstrap";
 import {useParams} from 'react-router-dom';
+import APIURL from '../Helpers/environment';
 
 const CommentTable = (props) => {
     const {id} = useParams();
     const commentPost = (post) => {
-        fetch(`http://localhost:3001/comment/delete/${id}` , {
+        fetch(`${APIURL}/comment/delete/${id}` , {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import APIURL from '../Helpers/environment';
 // import {useHistory} from 'react-router-dom';
 // import Auth from './Auth';
 
@@ -21,7 +22,7 @@ const Login = (props) => {
         //     alert(e.message);
         //   }
 
-        fetch("http://localhost:3001/user/login", {
+        fetch(`${APIURL}/user/login`, {
             method: 'POST',
             body: JSON.stringify({user:{email: email, password: password}}),
             headers: new Headers({

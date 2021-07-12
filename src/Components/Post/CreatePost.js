@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, TextField, FormControl } from '@material-ui/core';
 import {Form} from 'reactstrap';
 import { useState, useEffect } from 'react';
+import APIURL from '../Helpers/environment';
 
 export default function CreatePost (props) {
     const [title, setTitle] = useState('');
@@ -10,7 +11,7 @@ export default function CreatePost (props) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:3001/post/create`, {
+        fetch(`${APIURL}/post/create`, {
             method: 'POST',
             body: JSON.stringify({
                 post: {

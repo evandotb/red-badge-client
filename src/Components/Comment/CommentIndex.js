@@ -3,13 +3,14 @@ import {Container, Row, Col} from 'reactstrap';
 import CreateComment from './CreateComment';
 import CommentTable from './CommentTable'
 import EditComment from './EditComment';
+import APIURL from '../Helpers/environment';
 
 const CommentIndex = (props) => {
     const [comment, setComment] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
     const [commentToUpdate, setCommentToUpdate] = useState({});
     const fetchComment = () => {
-        fetch('http://localhost:3001/comment/',{
+        fetch(`${APIURL}/comment/`,{
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

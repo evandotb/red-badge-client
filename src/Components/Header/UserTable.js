@@ -12,6 +12,7 @@ import UpdateEmail from './UpdateEmail';
 import React from 'react';
 import { Table, Button } from "reactstrap";
 import {useParams} from 'react-router-dom';
+import APIURL from '../Helpers/environment';
 
 
 
@@ -20,7 +21,7 @@ const UserTable = (props) => {
     const {id} = useParams();
 
     const deleteUser = (user) => {
-        fetch(`http://localhost:3001/user/delete/${user.id}` , {
+        fetch(`${APIURL}/delete/${user.id}` , {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

@@ -2,11 +2,12 @@ import React from 'react';
 import { Table, Button } from "reactstrap";
 import {useParams} from 'react-router-dom';
 import EditPost from './EditPost';
+import APIURL from '../Helpers/environment';
 
 const PostTable = (props) => {
     const {id} = useParams();
     const deletePost = (post) => {
-        fetch(`http://localhost:3001/post/delete/${post.id}` , {
+        fetch(`${APIURL}/post/delete/${post.id}` , {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
