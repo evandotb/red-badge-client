@@ -4,7 +4,7 @@ import { Button, TextField, FormControl } from '@material-ui/core';
 import {Form} from 'reactstrap';
 // eslint-disable-next-line
 import { useState, useEffect } from 'react';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 export default function CreatePost (props) {
     const [title, setTitle] = useState('');

@@ -3,7 +3,7 @@ import {Container, Row, Col} from 'reactstrap';
 import CreateComment from './CreateComment';
 import CommentTable from './CommentTable'
 import EditComment from './EditComment';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 const CommentIndex = (props) => {
     const [comment, setComment] = useState([]);

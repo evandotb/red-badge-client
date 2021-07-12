@@ -4,7 +4,7 @@ import CreatePost from './CreatePost';
 import PostTable from './PostTable'
 import EditPost from './EditPost';
 import {useParams} from 'react-router-dom';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 const PostIndex = (props) => {
     const [post, setPost] = useState([]);

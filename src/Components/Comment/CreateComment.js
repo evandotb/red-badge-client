@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, TextField, FormControl } from '@material-ui/core';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 export default function CreateComment (props) {
     const [comment, setComment] = useState('');

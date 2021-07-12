@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 const PostEdit = (props) => {
     const [editComment, setEditComment] = useState('');

@@ -5,7 +5,7 @@ import Login from '../Auth/Login';
 import UserTable from './UserTable';
 import UpdateEmail from './UpdateEmail';
 import {useParams} from 'react-router-dom';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 const UserIndex = (props) => {
     const [user, setUser] = useState([]);

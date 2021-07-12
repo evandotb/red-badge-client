@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { TextField } from '@material-ui/core';
 import {useParams} from 'react-router-dom';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 const UpdateEmail = (props) =>{
     const [newEmail, setNewEmail] = useState('');

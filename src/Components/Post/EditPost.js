@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { Button, TextField, Title } from '@material-ui/core';
 import { Form } from 'reactstrap';
 import {useParams} from 'react-router-dom';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 const PostEdit = (props) => {
     const [editTitle, setEditTitle] = useState('');

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 const Signup = (props) => {
     const [username, setUsername] = useState('');

@@ -13,7 +13,7 @@ import UpdateEmail from './UpdateEmail';
 import React from 'react';
 import { Table, Button } from "reactstrap";
 import {useParams} from 'react-router-dom';
-import APIURL from '../Helpers/environment';
+import APIURL from '../../Helpers/environment';
 
 
 
